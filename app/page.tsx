@@ -1,3 +1,4 @@
+import ClientSection from "@/components/landing/client-section";
 import HeroSection from "@/components/landing/hero-section";
 import BgParticles from "@/components/landing/particles";
 import { SphereMask } from "@/components/landing/sphere-mask";
@@ -10,6 +11,7 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <BgParticles />
+      <ClientSection/>
       <SphereMask />
 
     </div>
