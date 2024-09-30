@@ -13,7 +13,6 @@ export default function HeroSection() {
                 #textshimmer - beta version
             
             </div> */}
-
         <h1 className="bg-clip-text bg-gradient-to-br from-30% from-gray-300  py-6 font-medium text-5xl text-balance text-transparent sm:text-6xl md:text-7xl lg:text-8xl leading-none tracking-tighter translate-y-[-1rem] animate-fade-in [--animation-delay:200ms]">
           Rakshak is the new way
           <br className="md:block hidden" /> to manage operations.

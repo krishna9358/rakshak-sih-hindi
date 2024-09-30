@@ -6,7 +6,7 @@ import Particles from "../ui/particles";
 export default function BgParticles(){
     return <div>
          <Particles
-        className="absolute inset-0"
+        className="-z-10 absolute inset-0 text-white"
         quantity={50}
         ease={70}
         color={"#ffffff"}
