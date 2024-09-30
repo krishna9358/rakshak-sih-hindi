@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import Link from 'next/link'
 import ShinyButton from './ui/shiny-button'
 import { ArrowRight } from 'lucide-react'
+import { IconBox } from '@tabler/icons-react'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -20,7 +21,8 @@ export default function Navbar() {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               <Link href="/" className="flex-shrink-0">
-                <span className="text-xl font-bold">Rakshak</span>
+                <span className="text-xl font-bold">
+                  <span className='flex'><IconBox className="ml-3px"/> Rakshak</span></span>
               </Link>
             </div>
             <div className="hidden md:block">

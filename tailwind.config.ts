@@ -60,7 +60,9 @@ const config: Config = {
   		animation: {
   			'shimmer-slide': 'shimmer-slide var(--speed) ease-in-out infinite alternate',
   			'spin-around': 'spin-around calc(var(--speed) * 2) infinite linear',
-  			'border-beam': 'border-beam calc(var(--duration)*1s) infinite linear'
+  			'border-beam': 'border-beam calc(var(--duration)*1s) infinite linear',
+  			marquee: 'marquee var(--duration) infinite linear',
+  			'marquee-vertical': 'marquee-vertical var(--duration) linear infinite'
   		},
   		keyframes: {
   			'shimmer-slide': {
@@ -85,6 +87,22 @@ const config: Config = {
   			'border-beam': {
   				'100%': {
   					'offset-distance': '100%'
+  				}
+  			},
+  			marquee: {
+  				from: {
+  					transform: 'translateX(0)'
+  				},
+  				to: {
+  					transform: 'translateX(calc(-100% - var(--gap)))'
+  				}
+  			},
+  			'marquee-vertical': {
+  				from: {
+  					transform: 'translateY(0)'
+  				},
+  				to: {
+  					transform: 'translateY(calc(-100% - var(--gap)))'
   				}
   			}
   		}
