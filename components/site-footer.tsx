@@ -60,6 +60,11 @@ const footerNavs = [
 				href: "https://www.linkedin.com/in/sameer-kumar-9a9b69278/",
 				name: "Sameer Kumar",
 			},
+						
+			{
+				href: "https://www.linkedin.com/in/ayushi-choudhary-3b7707285/",
+				name: "Ayushi Choudhary",
+			},
 		],
 	},
 ];
