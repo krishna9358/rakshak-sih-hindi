@@ -1,8 +1,14 @@
+"use client";
 import Link from "next/link";
 import ShimmerButton from "../ui/shimmer-button";
 import { ChevronRight } from "lucide-react";
+import { useRef } from "react";
+import { useInView } from "framer-motion";
+import { BorderBeam } from "../ui/border-beam";
 
 export default function HeroSection() {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: "-100px" });
   return (
     <div className="">
       <section
@@ -24,14 +30,37 @@ export default function HeroSection() {
         </p>
         <div className="flex justify-center items-center">
           <Link href="/signup" className="">
-          <div className="flex">
-            <ShimmerButton className="shadow-2xl">
-              <span className="flex item-center whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
-                Get Started <ChevronRight />
-              </span>
-            </ShimmerButton>
+            <div className="flex">
+              <ShimmerButton className="shadow-2xl">
+                <span className="flex item-center whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
+                  Get Started <ChevronRight />
+                </span>
+              </ShimmerButton>
             </div>
           </Link>
+        </div>
+
+        <div
+          ref={ref}
+          className="relative after:[background:linear-gradient(to_top,hsl(var(--background))_30%,transparent)] after:z-50 after:absolute after:inset-0  mt-[8rem] animate-fade-up [--animation-delay:400ms] [perspective:2000px]"
+        >
+          <div
+            className={`rounded-xl border border-white/10 bg-white bg-opacity-[0.01] before:absolute before:bottom-1/2 before:left-0 before:top-0 before:h-full before:w-full before:opacity-0 before:[filter:blur(180px)] before:[background-image:linear-gradient(to_bottom,var(--color-one),var(--color-one),transparent_40%)] ${
+              inView ? "before:animate-image-glow" : ""
+            }`}
+          >
+
+            <img
+              src="/hero-dark.png"
+              alt="Hero Image"
+              className="block relative  border rounded-[inherit] w-full h-full object-contain"
+            />
+            <BorderBeam
+              size={200}
+              duration={12}
+              delay={11}
+            />
+          </div>
         </div>
       </section>
     </div>
