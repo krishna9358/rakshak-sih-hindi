@@ -29,11 +29,13 @@ export default function Navbar() {
               <div className="ml-10 flex items-baseline space-x-4">
                 <Link href="/services" className="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700">Services</Link>
                 <div className="flex">
+                  <Link href="/login">
                   <ShinyButton>
                     <span className="flex items-center">
                       Login <ArrowRight className="ml-1.5 w-5 h-5" />
                     </span>
                   </ShinyButton>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -69,10 +71,10 @@ export default function Navbar() {
             <Link href="/services" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700 transition-colors duration-300 ease-in-out">
               Services
             </Link>
-            <Link href="/about" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700 transition-colors duration-300 ease-in-out">
+            <Link href="/login" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700 transition-colors duration-300 ease-in-out">
               Login
             </Link>
-            <Link href="/contact" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700 transition-colors duration-300 ease-in-out">
+            <Link href="/signup" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700 transition-colors duration-300 ease-in-out">
               Signup
             </Link>
           </div>
