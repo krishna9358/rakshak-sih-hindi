@@ -5,6 +5,7 @@ import { ChevronRight } from "lucide-react";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
 import { BorderBeam } from "../ui/border-beam";
+import { motion } from "framer-motion";
 
 export default function HeroSection() {
   const ref = useRef(null);
@@ -19,10 +20,15 @@ export default function HeroSection() {
                 #textshimmer - beta version
             
             </div> */}
+            <motion.div
+            initial={{ opacity: 0, y: -50 }}  // Start from above and fully transparent
+            animate={{ opacity: 1, y: 0 }}    // End with full opacity at the original position
+            transition={{ duration: 0.8 }}>
         <h1 className="bg-clip-text bg-gradient-to-br from-30% from-gray-300  py-6 font-medium text-5xl text-balance text-transparent sm:text-6xl md:text-7xl lg:text-8xl leading-none tracking-tighter translate-y-[-1rem] animate-fade-in [--animation-delay:200ms]">
           Rakshak is the new way
           <br className="md:block hidden" /> to manage operations.
         </h1>
+        </motion.div>
         <p className="mb-3 text-balance text-gray-400 text-lg md:text-xl tracking-tight translate-y-[-1rem] animate-fade-in [--animation-delay:400ms]">
           Rakshak allows you to audit, manage and store hardware inventory
           <br className="md:block hidden" /> on a blockchain integrated with
