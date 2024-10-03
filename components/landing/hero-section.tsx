@@ -21,9 +21,9 @@ export default function HeroSection() {
             
             </div> */}
             <motion.div
-            initial={{ opacity: 0, y: -50 }}  // Start from above and fully transparent
-            animate={{ opacity: 1, y: 0 }}    // End with full opacity at the original position
-            transition={{ duration: 0.8 }}>
+            initial={{ opacity: 0, y: -50 }} 
+            animate={{ opacity: 1, y: 0 }}    
+            transition={{ duration: 0.9 }}>
         <h1 className="bg-clip-text bg-gradient-to-br from-30% from-gray-300  py-6 font-medium text-5xl text-balance text-transparent sm:text-6xl md:text-7xl lg:text-8xl leading-none tracking-tighter translate-y-[-1rem] animate-fade-in [--animation-delay:200ms]">
           Rakshak is the new way
           <br className="md:block hidden" /> to manage operations.
@@ -45,7 +45,10 @@ export default function HeroSection() {
             </div>
           </Link>
         </div>
-
+        <motion.div
+            initial={{ opacity: 0, y: -50 }} 
+            animate={{ opacity: 1, y: 0 }}    
+            transition={{ duration: 0.9 }}>
         <div
           ref={ref}
           className="relative after:[background:linear-gradient(to_top,hsl(var(--background))_30%,transparent)] after:z-50 after:absolute after:inset-0  mt-[8rem] animate-fade-up [--animation-delay:400ms] [perspective:2000px]"
@@ -68,6 +71,7 @@ export default function HeroSection() {
             />
           </div>
         </div>
+        </motion.div>
       </section>
     </div>
   );
