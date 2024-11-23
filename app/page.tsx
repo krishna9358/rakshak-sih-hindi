@@ -10,7 +10,8 @@ import { SiteFooter } from "@/components/site-footer";
 export default function Home() {
 
   return (
-    <div >
+    
+    <div>
       <Navbar />
       <HeroSection />
       <BgParticles />
@@ -24,3 +25,4 @@ export default function Home() {
     
   );
 }
+

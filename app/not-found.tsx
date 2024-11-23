@@ -8,7 +8,7 @@ export default function NotFound() {
   useEffect(() => {
     // Redirect to home after 3 seconds
     const timeout = setTimeout(() => {
-      router.push('/');
+      router.push('/  ');
     }, 3000);
 
     return () => clearTimeout(timeout);
