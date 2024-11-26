@@ -1,4 +1,4 @@
-import { Command } from "lucide-react"
+import { ChevronRight, Command } from "lucide-react"
 
 import {
   Sidebar,
@@ -12,6 +12,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
+import { SidebarUser } from "../ui/sidebar-user";
 
 // Define the type for the items prop
 type Item = {
@@ -19,8 +20,12 @@ type Item = {
   url: string;
   icon: React.ElementType; // Assuming icon is a React component
 };
+type User = {
+  name: string;
+  email: string;
+};
 
-export function AppSidebar({ items }: { items: Item[] }) {
+export function AppSidebar({ items, titles, user }: { items: Item[], titles: string, user: User }) {
   return (
     <Sidebar variant="inset" collapsible="icon" className="bg-[#19191a]">
       {/* SIDEBAR HEADER */}
@@ -30,11 +35,11 @@ export function AppSidebar({ items }: { items: Item[] }) {
             <SidebarMenuButton size="lg" asChild>
               <a href="#">
                 <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary ">
-                  <Command className="size-4" />
+                  <Command className="size-4 text-sidebar-primary-foreground" />
                 </div>
                 <div className="grid flex-1 text-left text-sm leading-tight">
                   <span className="truncate font-semibold">Rakshak</span>
-                  <span className="truncate text-xs">Department</span>
+                  <span className="truncate text-xs">{titles}</span>
                 </div>
               </a>
             </SidebarMenuButton>
@@ -53,6 +58,7 @@ export function AppSidebar({ items }: { items: Item[] }) {
                     <a href={item.url}>
                       <item.icon />
                       <span>{item.title}</span>
+                    <ChevronRight className="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
                     </a>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
@@ -63,8 +69,7 @@ export function AppSidebar({ items }: { items: Item[] }) {
       </SidebarContent>
       {/* SIDEBAR FOOTER */}
       <SidebarFooter>
-        {/* <NavUser user={data.user} /> */}
-        
+        <SidebarUser user={user} />
       </SidebarFooter>
     </Sidebar>
   )

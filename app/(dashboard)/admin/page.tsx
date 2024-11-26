@@ -10,13 +10,13 @@ import {
   import { Separator } from "@/components/ui/separator";
   import { SidebarProvider } from "@/components/ui/sidebar";
   import { AppSidebar } from "@/components/dashboard/App-Sidebar";
-  import { items } from "@/config/data/sidebard";
+  import { items } from "@/config/data/sidebar";
   
   export default function Admin() {
     return (
       <>
       <SidebarProvider className="bg-[#19191a]">
-      <AppSidebar items={items.admin}  />
+      <AppSidebar items={items.admin} titles={items.titles.admin} user={items.user} />
       <SidebarInset>  
         <header className="flex h-16 shrink-0 items-center gap-2">
           <div className="flex items-center gap-2 px-4">
