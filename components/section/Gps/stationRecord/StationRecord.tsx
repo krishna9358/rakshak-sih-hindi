@@ -29,7 +29,7 @@ function StationRecord() {
         <table className="table">
           {/* head */}
           <thead>
-            <tr>
+            <tr className="border text-sm">
               <th></th>
               <th>Station ID</th>
               <th>Station Name</th>
@@ -52,7 +52,7 @@ function StationRecord() {
                     modal?.showModal();
                   }}
                 >
-                  <Eye className="bg-transparent" />
+                  <Eye className="bg-transparent text-primary" />
                 </button>
                 <dialog id="my_modal_1" className="modal">
                   <div className="modal-box">
@@ -161,7 +161,7 @@ function StationRecord() {
                     modal?.showModal();
                   }}
                 >
-                  <Eye className="bg-transparent" />
+                  <Eye className="bg-transparent text-primary" />
                 </button>
                 <dialog id="my_modal_1" className="modal">
                   <div className="modal-box">
@@ -193,7 +193,7 @@ function StationRecord() {
                     modal?.showModal();
                   }}
                 >
-                  <Eye className="bg-transparent" />
+                  <Eye className="bg-transparent text-primary" />
                 </button>
                 <dialog id="my_modal_1" className="modal">
                   <div className="modal-box">

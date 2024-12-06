@@ -16,7 +16,7 @@ import { items } from "@/config/data/sidebar";
 import Barcode from "./barcode/Barcode";
 import BudgetPrediction from "./bugdetPrediction/BudgetPrediction";
 import StationRecord from "./stationRecord/StationRecord";
-
+import ResourceAllocation from "./resourceAllocation/ResourceAllocation";
 export default function GpsMainComponent() {
   const [selectedComponent, setSelectedComponent] = useState<string>("");
 
@@ -28,6 +28,8 @@ export default function GpsMainComponent() {
         return <BudgetPrediction />;
       case "Station Record":
         return <StationRecord />;
+      case "Resource Allocation":
+        return <ResourceAllocation />;
       default:
         return <Barcode />;
     }
@@ -42,7 +44,7 @@ export default function GpsMainComponent() {
           user={items.user}
           onSelect={setSelectedComponent}
         />
-        <SidebarInset>
+        <SidebarInset className="">
           <header className="flex h-16 shrink-0 items-center gap-2">
             <div className="flex items-center gap-2 px-4">
               <SidebarTrigger className="-ml-1" />

@@ -3,12 +3,12 @@ import { LightbulbIcon } from "lucide-react";
 function BudgetPrediction() {
   return (
     <div className="mb-20">
-      Budget Prediction
+      <h1 className="text-xl font-bold"> Budget Prediction</h1>
       <div className="overflow-x-auto">
-        <table className="table">
+        <table className="table mt-4">
           {/* head */}
           <thead>
-            <tr>
+            <tr className="border text-sm ">
               <th></th>
               <th>Station Name</th>
               <th>Cost </th>
@@ -38,7 +38,7 @@ function BudgetPrediction() {
           </tbody>
         </table>
       </div>
-      <button className="btn btn-neutral-content text-white px-8 absolute bottom-6 right-10 m-4 text-[16px]">
+      <button className="btn btn-primary btn-md text-white px-8 absolute bottom-6 right-6 m-4 text-[16px]">
         <LightbulbIcon size={20} strokeWidth={0.75} /> Predict
       </button>
     </div>

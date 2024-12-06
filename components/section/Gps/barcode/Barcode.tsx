@@ -3,12 +3,12 @@ import { Printer } from "lucide-react";
 export default function Barcode() {
   return (
     <div className="mb-20">
-      Barcode
+      <h1 className="text-xl font-bold"> Barcode</h1>
       <div className="overflow-x-auto">
-        <table className="table">
+        <table className="table mt-4">
           {/* head */}
           <thead>
-            <tr>
+            <tr className="border text-sm ">
               <th></th>
               <th>Product Category</th>
               <th>Quantity</th>
@@ -22,6 +22,8 @@ export default function Barcode() {
               <td>Keyboard</td>
               <td>
                 <input
+                placeholder="10"
+                // value={10}
                   type="number"
                   min={0}
                   className="input input-bordered input-sm w-20 "
@@ -37,6 +39,7 @@ export default function Barcode() {
               <td>Walkie-Talkie</td>
               <td>
                 <input
+                placeholder="40"
                   type="number"
                   min={0}
                   className="input input-bordered input-sm w-20 "
@@ -52,6 +55,7 @@ export default function Barcode() {
               <td>Webcam</td>
               <td>
                 <input
+                placeholder="100"
                   type="number"
                   min={0}
                   className="input input-bordered input-sm w-20 "
@@ -65,7 +69,7 @@ export default function Barcode() {
           </tbody>
         </table>
       </div>
-      <button className="btn btn-neutral-content text-white px-8 absolute bottom-6 right-10 m-4 text-[16px]">
+      <button className="btn btn-primary btn-md text-white px-8 absolute bottom-6 right-6 m-4 text-[16px]">
         <Printer size={20} strokeWidth={0.75} /> Print
       </button>
     </div>
