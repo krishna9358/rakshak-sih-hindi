@@ -14,7 +14,7 @@ import { items } from "@/config/data/sidebar";
 
 export default function Department() {
   return (
-    <>
+    <main>
     <SidebarProvider>
     <AppSidebar items={items.department} titles={items.titles.department} user={items.user} />
     <SidebarInset>  
@@ -45,6 +45,6 @@ export default function Department() {
         </div>
     </SidebarInset>
     </SidebarProvider>
-  </>
+  </main>
   );
 }

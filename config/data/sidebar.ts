@@ -1,14 +1,15 @@
+import { IconCash, IconClockRecord, IconMoneybag } from "@tabler/icons-react";
 import {
   Key,
   DollarSign,
   Box,
   Clipboard,
-  FileText,
-  PlusCircle,
-  User,
-  Share2,
   Home,
-  QrCode,
+  Table2Icon,
+  BaggageClaim,
+  WrenchIcon,
+  ShoppingCart,
+  BarcodeIcon,
 } from "lucide-react";
 
 // Menu items.
@@ -22,7 +23,7 @@ export const items = {
     department: "Department",
     stations: "Stations",
     admin: "Admin",
-    auditStaff: "Audit Staff",
+    gps: "GP  Store",
   },
   department: [
     {
@@ -36,56 +37,41 @@ export const items = {
       icon: DollarSign,
     },
     {
-      title: "Inventory (Resources)",
+      title: "Self Inventory",
       url: "#",
       icon: Box,
     },
     {
-      title: "Station's Record",
+      title: "GP's Record",
       url: "#",
       icon: Clipboard,
     },
     {
-      title: "Audit Info",
+      title: "Budget Allocation",
       url: "#",
-      icon: FileText,
-    },
-    {
-      title: "Resource Requests",
-      url: "#",
-      icon: PlusCircle,
-    },
-    {
-      title: "Staff Details",
-      url: "#",
-      icon: User,
-    },
-    {
-      title: "Resource Allocation",
-      url: "#",
-      icon: Share2,
+      icon: IconMoneybag,
     },
   ],
   stations: [
     {
-      title: "Station Inventory",
+      title: "Resource Records",
       url: "#",
       icon: Box,
     },
     {
-      title: "Internal Audit",
+      title: "Repair & Replacement",
       url: "#",
       icon: Clipboard,
     },
     {
-      title: "Resource Requirement",
+      title: "Resource Requests",
       url: "#",
       icon: DollarSign,
     },
     {
-      title: "Raise a Ticket",
+      title: "Inter-Station Records",
       url: "#",
-      icon: PlusCircle,
+      icon: IconClockRecord,
     },
   ],
   admin: [
@@ -105,11 +91,41 @@ export const items = {
       icon: Clipboard,
     },
   ],
-  auditStaff: [
+  gps: [
     {
-      title: "Audit Process",
+      title: "Barcode Code Generate",
       url: "#",
-      icon: QrCode,
+      icon: BarcodeIcon,
+    },
+    {
+      title: "Budget Prediction",
+      url: "#",
+      icon: IconCash,
+    },
+    {
+      title: "Station Record",
+      url: "#",
+      icon: Table2Icon,
+    },
+    {
+      title: "Resource Allocation",
+      url: "#",
+      icon: BaggageClaim,
+    },
+    {
+      title: "Repair & Replacement",
+      url: "#",
+      icon: WrenchIcon,
+    },
+    {
+      title: "Self Inventory",
+      url: "#",
+      icon: Box,
+    },
+    {
+      title: "Purchase List",
+      url: "#",
+      icon: ShoppingCart,
     },
   ],
 };
