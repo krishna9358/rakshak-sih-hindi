@@ -1,3 +1,5 @@
+"use client"
+import { useState } from "react";
 import {
   Breadcrumb,
   BreadcrumbSeparator,
@@ -15,7 +17,22 @@ import Barcode from "./barcode/Barcode";
 import BudgetPrediction from "./bugdetPrediction/BudgetPrediction";
 import StationRecord from "./stationRecord/StationRecord";
 
-export default function gpsMainComponent() {
+export default function GpsMainComponent() {
+  const [selectedComponent, setSelectedComponent] = useState<string>("");
+
+  const renderComponent = () => {
+    switch (selectedComponent) {
+      case "Barcode Code Generate":
+        return <Barcode />;
+      case "Budget Prediction":
+        return <BudgetPrediction />;
+      case "Station Record":
+        return <StationRecord />;
+      default:
+        return <Barcode />;
+    }
+  };
+
   return (
     <div>
       <SidebarProvider>
@@ -23,6 +40,7 @@ export default function gpsMainComponent() {
           items={items.gps}
           titles={items.titles.gps}
           user={items.user}
+          onSelect={setSelectedComponent}
         />
         <SidebarInset>
           <header className="flex h-16 shrink-0 items-center gap-2">
@@ -43,12 +61,7 @@ export default function gpsMainComponent() {
             </div>
           </header>
           <div className="gap-4 p-4 pt-0">
-            {/* <div className="aspect-video rounded-xl bg-[#19191a]" />
-              <div className="aspect-video rounded-xl bg-[#19191a]" />
-              <div className="aspect-video rounded-xl bg-[#19191a]" /> */}
-            <Barcode />
-            <BudgetPrediction />
-            <StationRecord />
+            {renderComponent()}
           </div>
         </SidebarInset>
       </SidebarProvider>

@@ -1,3 +1,5 @@
+// import { useState } from "react";
+"use client"
 import { ChevronRight, Command } from "lucide-react"
 
 import {
@@ -25,7 +27,7 @@ type User = {
   email: string;
 };
 
-export function AppSidebar({ items, titles, user }: { items: Item[], titles: string, user: User }) {
+export function AppSidebar({ items, titles, user, onSelect }: { items: Item[], titles: string, user: User, onSelect: (component: string) => void }) {
   return (
     <Sidebar variant="inset" collapsible="icon" className="bg-[#19191a]">
       {/* SIDEBAR HEADER */}
@@ -55,10 +57,10 @@ export function AppSidebar({ items, titles, user }: { items: Item[], titles: str
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
-                    <a href={item.url}>
+                    <a href="#" onClick={() => onSelect(item.title)}>
                       <item.icon />
                       <span>{item.title}</span>
-                    <ChevronRight className="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
+                      <ChevronRight className="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
                     </a>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
