@@ -3,7 +3,7 @@ import { Printer } from "lucide-react";
 export default function Barcode() {
   return (
     <div className="mb-20">
-        Barcode
+      Barcode
       <div className="overflow-x-auto">
         <table className="table">
           {/* head */}
@@ -66,7 +66,7 @@ export default function Barcode() {
         </table>
       </div>
       <button className="btn btn-neutral-content text-white px-8 absolute bottom-6 right-10 m-4 text-[16px]">
-      <Printer size={20} strokeWidth={0.75} /> Print
+        <Printer size={20} strokeWidth={0.75} /> Print
       </button>
     </div>
   );

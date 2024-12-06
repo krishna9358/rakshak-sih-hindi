@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useState } from "react";
 import {
   Breadcrumb,
@@ -60,9 +60,7 @@ export default function GpsMainComponent() {
               </Breadcrumb>
             </div>
           </header>
-          <div className="gap-4 p-4 pt-0">
-            {renderComponent()}
-          </div>
+          <div className="gap-4 p-4 pt-0">{renderComponent()}</div>
         </SidebarInset>
       </SidebarProvider>
     </div>
