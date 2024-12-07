@@ -17,6 +17,9 @@ import Barcode from "./barcode/Barcode";
 import BudgetPrediction from "./bugdetPrediction/BudgetPrediction";
 import StationRecord from "./stationRecord/StationRecord";
 import ResourceAllocation from "./resourceAllocation/ResourceAllocation";
+import RepairReplacement from "./repairReplacement/RepairReplacement";
+import SelfInventory from "./self-Inventory/SelfInventory";
+import PurchaseList from "./purchaselist/PurchaseList";
 export default function GpsMainComponent() {
   const [selectedComponent, setSelectedComponent] = useState<string>("");
 
@@ -30,6 +33,12 @@ export default function GpsMainComponent() {
         return <StationRecord />;
       case "Resource Allocation":
         return <ResourceAllocation />;
+      case "Repair & Replacement":
+        return <RepairReplacement />;
+      case "Self Inventory":
+        return <SelfInventory />;
+      case "Purchase List":
+        return <PurchaseList/>;
       default:
         return <Barcode />;
     }

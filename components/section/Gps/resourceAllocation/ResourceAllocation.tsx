@@ -1,3 +1,5 @@
+import { Eye } from "lucide-react";
+
 function ResourceAllocation() {
   return (
     <div>
@@ -11,7 +13,7 @@ function ResourceAllocation() {
               <th>Station Details</th>
               <th>Product Details</th>
               <th>Demand Details</th>
-              <th>Delivery Details</th>
+              <th>Pick-up Details</th>
               <th>Amount</th>
               <th>Status</th>
               <th>Confirmation</th>
@@ -22,15 +24,44 @@ function ResourceAllocation() {
             <tr className="text-xs ">
               <th>1</th>
               <td>
+                <ul className="space-y-2">
+                <li>124</li>
+                <li>
                 MP Nagar Police Station, <br />
                 Bhopal
+                </li>
+                </ul>
               </td>
               <td>
-                <ul className="space-y-2 text-xs list-inside">
-                  <li>Keyboard</li>
-                  <li>Walkie-Talkie</li>
-                  <li>Webcam</li>
-                </ul>
+                <button
+                  className="btn bg-transparent border-none "
+                  onClick={() => {
+                    const modal = document.getElementById(
+                      "my_modal_1"
+                    ) as HTMLDialogElement;
+                    modal?.showModal();
+                  }}
+                >
+                  <Eye className="bg-transparent text-primary" />
+                </button>
+                <dialog id="my_modal_1" className="modal">
+                  <div className="modal-box">
+                      <table>
+                        <tr className="border text-sm">
+                        <th></th>
+                        <th>Product Category</th>
+                        <th>Quantity</th>
+                        <th>Status</th>
+                        </tr>
+                      </table>
+                    <div className="modal-action">
+                      <form method="dialog">
+                        {/* if there is a button in form, it will close the modal */}
+                        <button className="btn">Close</button>
+                      </form>
+                    </div>
+                  </div>
+                </dialog>
               </td>
               <td>
                 <ul className="space-y-2 text-xs list-inside">
@@ -54,11 +85,31 @@ function ResourceAllocation() {
               <th>2</th>
               <td>Police Thana Kamla Nagar, <br />Bhopal</td>
               <td>
-                <ul className="space-y-2 text-xs list-inside">
-                  <li>Keyboard</li>
-                  <li>Walkie-Talkie</li>
-                  <li>Webcam</li>
-                </ul>
+              <button
+                  className="btn bg-transparent border-none "
+                  onClick={() => {
+                    const modal = document.getElementById(
+                      "my_modal_1"
+                    ) as HTMLDialogElement;
+                    modal?.showModal();
+                  }}
+                >
+                  <Eye className="bg-transparent text-primary" />
+                </button>
+                <dialog id="my_modal_1" className="modal">
+                  <div className="modal-box">
+                    <h3 className="font-bold text-lg">Hello!</h3>
+                    <p className="py-4">
+                      Press ESC key or click the button below to close
+                    </p>
+                    <div className="modal-action">
+                      <form method="dialog">
+                        {/* if there is a button in form, it will close the modal */}
+                        <button className="btn">Close</button>
+                      </form>
+                    </div>
+                  </div>
+                </dialog>
               </td>
               <td>
                 <ul className="space-y-2 text-xs list-inside">
@@ -82,11 +133,31 @@ function ResourceAllocation() {
               <th>3</th>
               <td>T.T. Nagar Police Station, <br/> Bhopal</td>
               <td>
-                <ul className="space-y-2 text-xs list-inside">
-                  <li>Keyboard</li>
-                  <li>Walkie-Talkie</li>
-                  <li>Webcam</li>
-                </ul>
+              <button
+                  className="btn bg-transparent border-none "
+                  onClick={() => {
+                    const modal = document.getElementById(
+                      "my_modal_1"
+                    ) as HTMLDialogElement;
+                    modal?.showModal();
+                  }}
+                >
+                  <Eye className="bg-transparent text-primary" />
+                </button>
+                <dialog id="my_modal_1" className="modal">
+                  <div className="modal-box">
+                    <h3 className="font-bold text-lg">Hello!</h3>
+                    <p className="py-4">
+                      Press ESC key or click the button below to close
+                    </p>
+                    <div className="modal-action">
+                      <form method="dialog">
+                        {/* if there is a button in form, it will close the modal */}
+                        <button className="btn">Close</button>
+                      </form>
+                    </div>
+                  </div>
+                </dialog>
               </td>
               <td>
                 <ul className="space-y-2 text-xs list-inside">
@@ -110,11 +181,31 @@ function ResourceAllocation() {
               <th>3</th>
               <td>T.T. Nagar Police Station, <br/> Bhopal</td>
               <td>
-                <ul className="space-y-2 text-xs list-inside">
-                  <li>Keyboard</li>
-                  <li>Walkie-Talkie</li>
-                  <li>Webcam</li>
-                </ul>
+              <button
+                  className="btn bg-transparent border-none "
+                  onClick={() => {
+                    const modal = document.getElementById(
+                      "my_modal_1"
+                    ) as HTMLDialogElement;
+                    modal?.showModal();
+                  }}
+                >
+                  <Eye className="bg-transparent text-primary" />
+                </button>
+                <dialog id="my_modal_1" className="modal">
+                  <div className="modal-box">
+                    <h3 className="font-bold text-lg">Hello!</h3>
+                    <p className="py-4">
+                      Press ESC key or click the button below to close
+                    </p>
+                    <div className="modal-action">
+                      <form method="dialog">
+                        {/* if there is a button in form, it will close the modal */}
+                        <button className="btn">Close</button>
+                      </form>
+                    </div>
+                  </div>
+                </dialog>
               </td>
               <td>
                 <ul className="space-y-2 text-xs list-inside">
