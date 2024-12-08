@@ -42,7 +42,7 @@ export const items = {
       icon: Box,
     },
     {
-      title: "GP's Record",
+      title: "GPS's Record",
       url: "#",
       icon: Clipboard,
     },

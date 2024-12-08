@@ -1,16 +1,29 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { ArrowLeft} from "lucide-react";
-import { IconBrandGoogle } from "@tabler/icons-react";
+import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { signInWithEmailAndPassword} from "firebase/auth";
+import { auth } from "@/lib/firebaseConfig";
+import { useAuth } from "@/lib/useAuth";
+import { FirebaseError } from "firebase/app";
 
 export default function Login() {
   const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const router = useRouter();
+  const { user, loading } = useAuth();
+
+  useEffect(() => {
+    if (!loading && user) {
+      router.push("/department"); // Redirect authenticated users
+    }
+  }, [user, loading, router]);
 
   const validateEmail = (email: string) => {
     const re =
@@ -23,18 +36,43 @@ export default function Login() {
     setError("");
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPassword(e.target.value);
+    setError("");
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!email) {
-      setError("Email is required");
+    if (!email || !password) {
+      setError("Email and password are required");
     } else if (!validateEmail(email)) {
       setError("Please enter a valid email address");
     } else {
-      console.log("Form submitted with email:", email);
-      setEmail("");
-      setError("");
+      try {
+        await signInWithEmailAndPassword(auth, email, password);
+        console.log("User signed in successfully");
+        setEmail("");
+        setPassword("");
+        setError("");
+
+        // New redirection logic based on email prefix
+        if (email.startsWith("admin")) {
+          router.push("/admin");
+        } else if (email.startsWith("station")) {
+          router.push("/station");
+        } else if (email.startsWith("department")) {
+          router.push("/department");
+        } else if (email.startsWith("gps")) {
+          router.push("/gps");
+        }
+      } catch (err: unknown) {
+        if (err instanceof FirebaseError) {
+          setError(err.message || "Failed to sign in");
+        }
+      }
     }
   };
+
 
   return (
     <div className="relative min-h-screen overflow-hidden bg-gradient-to-br from-gray-900 via-black to-gray-800">
@@ -72,7 +110,7 @@ export default function Login() {
               Welcome to Rakshak
             </h1>
             <p className="text-sm text-gray-400 mb-8">Sign in with an account</p>
-            
+
             {/* Sign up form */}
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
@@ -84,43 +122,30 @@ export default function Login() {
                   className="bg-gray-800/50 border-gray-700 text-white placeholder-gray-500 focus:ring-2 focus:ring-blue-500 transition-all duration-300"
                   aria-label="Email address"
                   aria-invalid={error ? "true" : "false"}
-                  aria-describedby={error ? "email-error" : undefined}
                 />
-                {error && (
-                  <p id="email-error" className="text-red-500 text-xs mt-1" role="alert">
-                    {error}
-                  </p>
-                )}
               </div>
-              <Button type="submit" className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700 transition-all duration-300">
+              <div>
+                <Input
+                  type="password"
+                  placeholder="Enter your password"
+                  value={password}
+                  onChange={handlePasswordChange}
+                  className="bg-gray-800/50 border-gray-700 text-white placeholder-gray-500 focus:ring-2 focus:ring-blue-500 transition-all duration-300"
+                  aria-label="Password"
+                />
+              </div>
+              {error && (
+                <p className="text-red-500 text-xs mt-1" role="alert">
+                  {error}
+                </p>
+              )}
+              <Button
+                type="submit"
+                className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
+              >
                 Sign in with Email
               </Button>
             </form>
-
-            {/* Divider */}
-            <div className="my-6 text-center w-full">
-              <div className="relative">
-                <div className="absolute inset-0 flex items-center">
-                  <div className="w-full border-t border-gray-700"></div>
-                </div>
-                <div className="relative flex justify-center text-xs uppercase">
-                  <span className="bg-gray-900 px-2 text-gray-400">Or continue with</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Google Sign in */}
-            <Button variant="outline" className="w-full bg-transparent border-gray-700 text-white hover:bg-gray-800 mt-4">
-              <IconBrandGoogle className="mr-2 h-4 w-4" />
-              Google
-            </Button>
-
-            <p className="mt-6 text-sm text-gray-400 text-center">
-              Dont have an account?{" "}
-              <Link href="/signup" className="text-blue-400 hover:text-blue-300 underline transition-colors duration-300">
-                Sign up
-              </Link>
-            </p>
           </motion.div>
         </div>
       </motion.div>

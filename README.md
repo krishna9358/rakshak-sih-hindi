@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Rakshak
 
-## Getting Started
+## Introduction
+Rakshak is a [brief description of the project, its purpose, and its target audience]. It aims to [explain the main goals and functionalities of the project].
 
-First, run the development server:
+## How to Run the Project
+To run the Rakshak project locally, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/yourusername/rakshak.git
+   cd rakshak
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. **Run the application:**
+   ```bash
+   npm run dev
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. **Access the application:**
+   Open your browser and go to `http://localhost:3000`.
 
-## Learn More
+## Routes
+The following routes are available in the Rakshak application:
 
-To learn more about Next.js, take a look at the following resources:
+### Frontend Routes
+- `/department` - Department Page
+- `/gps` - GPS Page
+- `/station` - Station Page
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<!-- ### Backend Routes
+- `GET /api/v1/resource` - [Description of the route]
+- `POST /api/v1/resource` - [Description of the route]
+- `PUT /api/v1/resource/:id` - [Description of the route]
+- `DELETE /api/v1/resource/:id` - [Description of the route] -->
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Technologies Used
+Rakshak is built using the following technologies:
 
-## Deploy on Vercel
+- **Frontend:** [e.g., React, Next.js]
+- **Backend:** [e.g., Node.js, Express, Next.js]
+- **Database:** [e.g.,  PostgreSQL, Prisma]
+- **Other Tools:** [e.g., Docker, Postman etc., Redis]
+- **Machine Learning:** [e.g., TensorFlow, LLM, Python]
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Future Scope
+The future scope of Rakshak includes:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- 
+- 
+- 
+
+We welcome contributions and suggestions to enhance the project further.

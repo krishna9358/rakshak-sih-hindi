@@ -28,20 +28,33 @@ import {
   SidebarMenuItem,
   useSidebar,
 } from "@/components/ui/sidebar"
+import { signOut } from "firebase/auth"
+import { useRouter } from "next/navigation"
+import { auth } from "@/lib/firebaseConfig"
 
 export function SidebarUser({
   user,
-}: {
+}: {  
   user?: {
     name: string
     email: string
   }
 }) {
   const { isMobile } = useSidebar()
+  const router = useRouter()
 
   if (!user) {
     return null;
   }
+  const handleLogout = async () => {
+    try {
+      await signOut(auth);
+      router.push("/login"); // Redirect to login page after logout
+    } catch (error) {
+      console.error("Error signing out:", error);
+    }
+  };
+
 
   return (
     <SidebarMenu>
@@ -100,7 +113,7 @@ export function SidebarUser({
               </DropdownMenuItem>
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>
+            <DropdownMenuItem onClick={handleLogout}>
               <LogOut />
               Log out
             </DropdownMenuItem>
