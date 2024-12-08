@@ -18,8 +18,10 @@ export default function Home() {
       <ClientSection/>
       <SphereMask />
       <FeaturesSection />
+      {/* <img src="/budget.jpeg" className="block mx-auto rounded-[inherit] w-[900px] h-full object-contain"/> */}
       <CallToActionSection/>
       <SiteFooter />
+      
       <script async src="https://automatic.chat/embed.js" id="cm1s9u51v01regfpjv0lsfu9t" ></script>
     </div>
     

@@ -5,6 +5,10 @@ import { SidebarInset, SidebarProvider, SidebarTrigger } from '@/components/ui/s
 import { Separator } from '@radix-ui/react-separator'
 import React, { useState } from 'react'
 import { items } from "@/config/data/sidebar";
+import ResourceRecord from './resourceRecord/ResourceRecord'
+import RepairReplacement from './repairReplacement/RepairReplacement'
+import ResourceRequest from './resourceRequest/ResourceRequest'
+import InterStationRecords from './interStationRecords/InterStationRecords'
 
 export default function StationMainComponent() {
     const [selectedComponent, setSelectedComponent] = useState<string>("");
@@ -12,15 +16,15 @@ export default function StationMainComponent() {
     const renderComponent = () => {
       switch (selectedComponent) {
         case "Resource Records":
-          return null;
+          return <ResourceRecord/>;
         case "Repair & Replacement":
-          return null;
+          return <RepairReplacement />;
         case "Resource Requests":
-          return null;
+          return <ResourceRequest />;
         case "Inter-Station Records":
-          return null;
+          return <InterStationRecords />;
         default:
-          return null;
+          return <ResourceRecord/>;
       }
     };
   return (

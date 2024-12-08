@@ -7,7 +7,7 @@ function RepairReplacement() {
 
   return (
     <div>
-            <h1 className="text-xl font-bold"> Repair & Replacement</h1>
+      <h1 className="text-xl font-bold"> Repair & Replacement</h1>
       <div>
         <table className="table mt-4">
           {/* head */}
@@ -15,7 +15,7 @@ function RepairReplacement() {
             <tr className="text-sm border ">
               <th></th>
               <th>Station Details</th>
-              <th>Product Category</th>
+              <th>Product Details</th>
               <th>Request Details</th>
               <th>Shipment Details</th>
               {/* <th>Status</th> */}
@@ -49,8 +49,14 @@ function RepairReplacement() {
                   <Eye className="bg-transparent text-primary" />
                 </button>
                 <dialog id="my_modal_1" className="modal ">
-                  <div className="modal-box">
-                    <table>
+                  <div className="modal-box min-w-[700px] min-h-[500px] flex flex-col">
+                    <form method="dialog" className="m-2">
+                      {/* if there is a button in form, it will close the modal */}
+                      <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+                        ✕
+                      </button>
+                    </form>
+                    <table className="w-full">
                       <tr className="text-sm border">
                         <th></th>
                         <th>Product Category</th>
@@ -93,15 +99,16 @@ function RepairReplacement() {
                           </ul>
                         </div>
                       </td>
-                      <td><input
-                  type="checkbox"
-                  className="checkbox text-xs "
-                  defaultChecked
-                ></input></td>
+                      <td>
+                        <input
+                          type="checkbox"
+                          className="checkbox text-xs "
+                          defaultChecked
+                        ></input>
+                      </td>
                     </table>
-                    <div className="modal-action">
+                    <div className="modal-action mt-auto flex justify-end">
                       <form method="dialog">
-                        {/* if there is a button in form, it will close the modal */}
                         <button className="btn" type="submit">
                           Submit
                         </button>
@@ -225,16 +232,16 @@ function RepairReplacement() {
                           </ul>
                         </div>
                       </td>
-                      <td><input
-                  type="checkbox"
-                  className="checkbox text-xs "
-                  defaultChecked
-                ></input></td>
+                      <td>
+                        <input
+                          type="checkbox"
+                          className="checkbox text-xs "
+                          defaultChecked
+                        ></input>
+                      </td>
                     </table>
-                    <div className="modal-action">
+                    <div className="modal-action flex justify-end">
                       <form method="dialog">
-                        {/* if there is a button in form, it will close the modal */}
-                        
                         <button className="btn" type="submit">
                           Submit
                         </button>
@@ -273,7 +280,7 @@ function RepairReplacement() {
                 T.T. Nagar Police Station, <br /> Bhopal
               </td>
               <td>
-              <button
+                <button
                   className="btn bg-transparent border-none "
                   onClick={() => {
                     const modal = document.getElementById(
@@ -329,15 +336,16 @@ function RepairReplacement() {
                           </ul>
                         </div>
                       </td>
-                      <td><input
-                  type="checkbox"
-                  className="checkbox text-xs "
-                  defaultChecked
-                ></input></td>
+                      <td>
+                        <input
+                          type="checkbox"
+                          className="checkbox text-xs "
+                          defaultChecked
+                        ></input>
+                      </td>
                     </table>
-                    <div className="modal-action">
+                    <div className="modal-action flex justify-end">
                       <form method="dialog">
-                        {/* if there is a button in form, it will close the modal */}
                         <button className="btn" type="submit">
                           Submit
                         </button>

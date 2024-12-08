@@ -45,8 +45,8 @@ function ResourceAllocation() {
                   <Eye className="bg-transparent text-primary" />
                 </button>
                 <dialog id="my_modal_1" className="modal">
-                  <div className="modal-box">
-                      <table>
+                  <div className="modal-box min-w-[700px] min-h-[500px]">
+                      <table className="w-full">
                         <tr className="border text-sm">
                         <th></th>
                         <th>Product Category</th>
@@ -54,10 +54,10 @@ function ResourceAllocation() {
                         <th>Status</th>
                         </tr>
                       </table>
-                    <div className="modal-action">
-                      <form method="dialog">
+                    <div className="modal-action ">
+                      <form method="dialog  flex justify-end mt-auto">
                         {/* if there is a button in form, it will close the modal */}
-                        <button className="btn">Close</button>
+                        <button className="btn  ">Close</button>
                       </form>
                     </div>
                   </div>
