@@ -46,13 +46,14 @@ export default function GpsMainComponent() {
 
   return (
     <div>
-      <SidebarProvider>
+      <SidebarProvider >
         <AppSidebar
           items={items.gps}
           titles={items.titles.gps}
           user={items.user}
           onSelect={setSelectedComponent}
         />
+        {/* TODO: change color of main */}
         <SidebarInset className="">
           <header className="flex h-16 shrink-0 items-center gap-2">
             <div className="flex items-center gap-2 px-4">
