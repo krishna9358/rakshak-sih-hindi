@@ -68,7 +68,7 @@ export default function GpsMainComponent() {
               <a href="http://localhost:3000/department" className="text-white">English</a>
             </div>
           </header>
-          <div className="gap-4 p-4 pt-0">{renderComponent()}</div>
+          <div className="gap-4 p-4 pt-0">{renderComponent()}</div> 
         </SidebarInset>
       </SidebarProvider>
     </div>
