@@ -4,28 +4,28 @@ import React from "react";
 function RepairReplacement() {
   return (
     <div>
-      <h1 className="text-xl font-bold text-[#563007]"> Repair Replacement</h1>
+      <h1 className="text-xl font-bold text-[#563007]"> मरम्मत प्रतिस्थापन</h1>
       <div className="overflow-x-auto">
         <table className="table mt-4">
           {/* head */}
           <thead>
             <tr className="border text-sm text-[#563007]">
               <th></th>
-              <th>Product Category</th>
-              <th>Date of Request </th>
-              <th>Status</th>
-              <th>Action</th>
+              <th>उत्पाद श्रेणी</th>
+              <th>अनुरोध की तिथि</th>
+              <th>स्थिति</th>
+              <th>क्रिया</th>
             </tr>
           </thead>
           <tbody className="text-[#563007]">
             {/* row 1 */}
             <tr>
               <th>1</th>
-              <td>Keyboard</td>
+              <td>कीबोर्ड</td>
               <td>10/10/2003</td>
               <td>
                 <div className="badge badge-primary badge-outline text-xs ">
-                  In Process
+                  प्रक्रिया में
                 </div>
               </td>
               <td>
@@ -35,11 +35,11 @@ function RepairReplacement() {
             </tr>
             <tr>
               <th>2</th>
-              <td>Walkie-Talkie</td>
+              <td>वॉकी-टॉकी</td>
               <td>10/12/2023</td>
               <td>
                 <div className="badge badge-success badge-outline text-xs ">
-                  Repaired
+                  मरम्मत की गई
                 </div>
               </td>
               <td>
@@ -49,11 +49,11 @@ function RepairReplacement() {
             </tr>
             <tr>
               <th>3</th>
-              <td>Webcam</td>
+              <td>वेबकैम</td>
               <td>10/12/2023</td>
               <td>
                 <div className="badge badge-error badge-outline text-xs ">
-                  Failed
+                  विफल
                 </div>
               </td>
               <td>
@@ -63,11 +63,11 @@ function RepairReplacement() {
             </tr>
             <tr>
               <th>4</th>
-              <td>Webcam</td>
+              <td>वेबकैम</td>
               <td>10/12/2023</td>
               <td>
                 <div className="badge badge-secondary badge-outline text-xs ">
-                  Repair
+                  मरम्मत
                 </div>
               </td>
               <td>
@@ -87,7 +87,7 @@ function RepairReplacement() {
                     modal?.showModal();
                   }}
                 >
-                  + Add Items
+                  + आइटम जोड़ें
                 </Link>
               </td>
               <dialog id="my_modal_1" className="modal">
@@ -96,7 +96,7 @@ function RepairReplacement() {
                     <form method="dialog">
                       {/* if there is a button in form, it will close the modal */}
                       
-                      <button className="btn bg-[#d2b99f] text-white">Submit</button>
+                      <button className="btn bg-[#d2b99f] text-white">जमा करें</button>
                     </form>
                   </div>
                 </div>
@@ -105,7 +105,7 @@ function RepairReplacement() {
           </tfoot>
         </table>
         <button className="btn bg-[#d2b99f] btn-md text-white px-8 absolute bottom-6 right-6 m-4 text-[16px]">
-          SUBMIT
+          जमा करें
         </button>
       </div>
     </div>

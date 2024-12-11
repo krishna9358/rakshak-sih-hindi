@@ -15,13 +15,13 @@ export default function StationMainComponent() {
 
     const renderComponent = () => {
       switch (selectedComponent) {
-        case "Resource Records":
+        case "संसाधन रिकॉर्ड":
           return <ResourceRecord/>;
-        case "Repair & Replacement":
+        case "मरम्मत और प्रतिस्थापन":
           return <RepairReplacement />;
-        case "Resource Requests":
+        case "संसाधन अनुरोध":
           return <ResourceRequest />;
-        case "Inter-Station Records":
+        case "इंटर-स्टेशन रिकॉर्ड":
           return <InterStationRecords />;
         default:
           return <ResourceRecord/>;
@@ -44,17 +44,17 @@ export default function StationMainComponent() {
               <Breadcrumb>
                 <BreadcrumbList>
                   <BreadcrumbItem className="hidden md:block">
-                    <BreadcrumbLink href="#" className='text-[#563007]'>Station</BreadcrumbLink>
+                    <BreadcrumbLink href="#" className='text-[#563007]'>स्टेशन</BreadcrumbLink>
                   </BreadcrumbItem>
                   <BreadcrumbSeparator className="hidden md:block" />
                   <BreadcrumbItem>
-                    <BreadcrumbPage className='text-[#563007]'>Home</BreadcrumbPage>
+                    <BreadcrumbPage className='text-[#563007]'>होम</BreadcrumbPage>
                   </BreadcrumbItem>
                 </BreadcrumbList>
               </Breadcrumb>
             </div>
             <div className="flex items-center gap-2 px-4 py-2 bg-[#563007] rounded-md ml-auto ">
-              <a href="http://localhost:3000/station" className="text-white">English</a>
+              <a href="http://localhost:3000/station" className="text-white">अंग्रेज़ी</a>
             </div>
           </header>
           <div className="gap-4 p-4 pt-0">{renderComponent()}</div>

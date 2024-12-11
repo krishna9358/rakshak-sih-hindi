@@ -10,11 +10,11 @@ function ResourceRecord() {
       <div>
         <div className="flex justify-between mb-4">
           <div>
-            <h1 className="text-xl font-bold text-[#563007]"> Resource Record</h1>
+            <h1 className="text-xl font-bold text-[#563007]"> संसाधन रिकॉर्ड</h1>
           </div>
           <div className="">
             <label className="input input-bordered flex items-center h-9 bg-white input-warning ">
-              <input type="text" className="" placeholder="Search" />
+              <input type="text" className="" placeholder="खोजें" />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 16 16"
@@ -36,16 +36,16 @@ function ResourceRecord() {
             <thead>
               <tr className="border text-sm text-[#563007]">
                 <th></th>
-                <th>Product Name</th>
-                <th>Quantity</th>
-                <th>Status</th>
+                <th>उत्पाद का नाम</th>
+                <th>मात्रा</th>
+                <th>स्थिति</th>
               </tr>
             </thead>
             <tbody className="text-[#563007]">
               {/* row 1 */}
               <tr>
                 <th>1</th>
-                <td>Keyboard</td>
+                <td>कीबोर्ड</td>
                 <td>10</td>
                 <td>
                   <button
@@ -64,13 +64,13 @@ function ResourceRecord() {
                       <table className="w-full">
                         <thead className="text-[#563007]">
                           <tr className="border ">
-                            <th>Sr.</th>
-                            <th>Product Id</th>
-                            <th>Status </th>
-                            <th>MFD</th>
-                            <th>Warranty</th>
-                            <th>In uses</th>
-                            <th>Last Upgrade</th>
+                            <th>क्रमांक</th>
+                            <th>उत्पाद आईडी</th>
+                            <th>स्थिति </th>
+                            <th>निर्माण तिथि</th>
+                            <th>वारंटी</th>
+                            <th>उपयोग में</th>
+                            <th>अंतिम अपग्रेड</th>
                           </tr>
                         </thead>
                         <tbody className="">
@@ -93,12 +93,12 @@ function ResourceRecord() {
                               >
                                 <path d="M20 6 9 17l-5-5" />
                               </svg>
-                              Working
+                              कार्यरत
                             </div>
                           </td>
                           <td>10/10/2019</td>
                           <td>10/10/2020</td>
-                          <td>10 Months</td>
+                          <td>10 महीने</td>
                           <td>08/12/2024</td>
                         </tbody>
                         <tbody>
@@ -121,12 +121,12 @@ function ResourceRecord() {
                               >
                                 <path d="M20 6 9 17l-5-5" />
                               </svg>
-                              Working
+                              कार्यरत
                             </div>
                           </td>
                           <td>10/10/2019</td>
                           <td>10/10/2020</td>
-                          <td>10 Months</td>
+                          <td>10 महीने</td>
                           <td>08/12/2024</td>
                         </tbody>
                         <tbody>
@@ -149,19 +149,19 @@ function ResourceRecord() {
                               >
                                 <path d="M20 6 9 17l-5-5" />
                               </svg>
-                              Working
+                              कार्यरत
                             </div>
                           </td>
                           <td>10/10/2019</td>
                           <td>10/10/2020</td>
-                          <td>10 Months</td>
+                          <td>10 महीने</td>
                           <td>08/12/2024</td>
                         </tbody>
                       </table>
                       <div className="modal-action">
                         <form method="dialog">
-                          {/* if there is a button in form, it will close the modal */}
-                          <button className="btn">Close</button>
+                          {/* यदि फॉर्म में कोई बटन है, तो यह मोडल बंद कर देगा */}
+                          <button className="btn">बंद करें</button>
                         </form>
                       </div>
                     </div>
@@ -170,7 +170,7 @@ function ResourceRecord() {
               </tr>
               <tr>
                 <th>2</th>
-                <td>Mouse</td>
+                <td>माउस</td>
                 <td>50</td>
                 <td>
                   <button
@@ -189,13 +189,13 @@ function ResourceRecord() {
                       <table className="w-full">
                         <thead>
                           <tr className="border ">
-                            <th>Sr.</th>
-                            <th>Product Id</th>
-                            <th>Status </th>
-                            <th>MFD</th>
-                            <th>Warranty</th>
-                            <th>In uses</th>
-                            <th>Last Upgrade</th>
+                            <th>क्रमांक</th>
+                            <th>उत्पाद आईडी</th>
+                            <th>स्थिति </th>
+                            <th>निर्माण तिथि</th>
+                            <th>वारंटी</th>
+                            <th>उपयोग में</th>
+                            <th>अंतिम अपग्रेड</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -218,12 +218,12 @@ function ResourceRecord() {
                               >
                                 <path d="M20 6 9 17l-5-5" />
                               </svg>
-                              Working
+                              कार्यरत
                             </div>
                           </td>
                           <td>10/10/2019</td>
                           <td>10/10/2020</td>
-                          <td>10 Months</td>
+                          <td>10 महीने</td>
                           <td>08/12/2024</td>
                         </tbody>
                         <tbody>
@@ -246,12 +246,12 @@ function ResourceRecord() {
                               >
                                 <path d="M20 6 9 17l-5-5" />
                               </svg>
-                              Working
+                              कार्यरत
                             </div>
                           </td>
                           <td>10/10/2019</td>
                           <td>10/10/2020</td>
-                          <td>10 Months</td>
+                          <td>10 महीने</td>
                           <td>08/12/2024</td>
                         </tbody>
                         <tbody>
@@ -274,19 +274,19 @@ function ResourceRecord() {
                               >
                                 <path d="M20 6 9 17l-5-5" />
                               </svg>
-                              Working
+                              कार्यरत
                             </div>
                           </td>
                           <td>10/10/2019</td>
                           <td>10/10/2020</td>
-                          <td>10 Months</td>
+                          <td>10 महीने</td>
                           <td>08/12/2024</td>
                         </tbody>
                       </table>
                       <div className="modal-action">
                         <form method="dialog">
-                          {/* if there is a button in form, it will close the modal */}
-                          <button className="btn">Close</button>
+                          {/* यदि फॉर्म में कोई बटन है, तो यह मोडल बंद कर देगा */}
+                          <button className="btn">बंद करें</button>
                         </form>
                       </div>
                     </div>
@@ -295,7 +295,7 @@ function ResourceRecord() {
               </tr>
               <tr>
                 <th>3</th>
-                <td>Webcam</td>
+                <td>वेबकैम</td>
                 <td>14</td>
                 <td>
                   <button
@@ -314,13 +314,13 @@ function ResourceRecord() {
                       <table className="w-full">
                         <thead>
                           <tr className="border ">
-                            <th>Sr.</th>
-                            <th>Product Id</th>
-                            <th>Status </th>
-                            <th>MFD</th>
-                            <th>Warranty</th>
-                            <th>In uses</th>
-                            <th>Last Upgrade</th>
+                            <th>क्रमांक</th>
+                            <th>उत्पाद आईडी</th>
+                            <th>स्थिति </th>
+                            <th>निर्माण तिथि</th>
+                            <th>वारंटी</th>
+                            <th>उपयोग में</th>
+                            <th>अंतिम अपग्रेड</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -343,12 +343,12 @@ function ResourceRecord() {
                               >
                                 <path d="M20 6 9 17l-5-5" />
                               </svg>
-                              Working
+                              कार्यरत
                             </div>
                           </td>
                           <td>10/10/2019</td>
                           <td>10/10/2020</td>
-                          <td>10 Months</td>
+                          <td>10 महीने</td>
                           <td>08/12/2024</td>
                         </tbody>
                         <tbody>
@@ -371,12 +371,12 @@ function ResourceRecord() {
                               >
                                 <path d="M20 6 9 17l-5-5" />
                               </svg>
-                              Working
+                              कार्यरत
                             </div>
                           </td>
                           <td>10/10/2019</td>
                           <td>10/10/2020</td>
-                          <td>10 Months</td>
+                          <td>10 महीने</td>
                           <td>08/12/2024</td>
                         </tbody>
                         <tbody>
@@ -399,19 +399,19 @@ function ResourceRecord() {
                               >
                                 <path d="M20 6 9 17l-5-5" />
                               </svg>
-                              Working
+                              कार्यरत
                             </div>
                           </td>
                           <td>10/10/2019</td>
                           <td>10/10/2020</td>
-                          <td>10 Months</td>
+                          <td>10 महीने</td>
                           <td>08/12/2024</td>
                         </tbody>
                       </table>
                       <div className="modal-action">
                         <form method="dialog">
-                          {/* if there is a button in form, it will close the modal */}
-                          <button className="btn">Close</button>
+                          {/* यदि फॉर्म में कोई बटन है, तो यह मोडल बंद कर देगा */}
+                          <button className="btn">बंद करें</button>
                         </form>
                       </div>
                     </div>
