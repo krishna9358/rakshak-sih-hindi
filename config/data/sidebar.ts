@@ -15,115 +15,115 @@ import {
 // Menu items.
 export const items = {
   user: {
-    name: "Krishna Mohan",
+    name: "कृष्ण मोहन",
     email: "krishanmohank974@gmail.com",
     avatar: "/profile.jpeg",
   },
   titles: {
-    department: "Department",
-    stations: "Stations",
-    admin: "Admin",
-    gps: "GP  Store",
+    department: "विभाग",
+    stations: "स्टेशन्स",
+    admin: "प्रशासन",
+    gps: "जीपी स्टोर",
   },
   department: [
     {
-      title: "Credentials",
+      title: "आईडी बनाएं",
       url: "#",
       icon: Key,
     },
     {
-      title: "Budget Predictions",
+      title: "बजट भविष्यवाणियाँ",
       url: "#",
       icon: DollarSign,
     },
     {
-      title: "Self Inventory",
+      title: "स्वयं इन्वेंटरी",
       url: "#",
       icon: Box,
     },
     {
-      title: "GPS's Record",
+      title: "जीपीएस का रिकॉर्ड",
       url: "#",
       icon: Clipboard,
     },
     {
-      title: "Budget Allocation",
+      title: "बजट आवंटन",
       url: "#",
       icon: IconMoneybag,
     },
   ],
   stations: [
     {
-      title: "Resource Records",
+      title: "संसाधन रिकॉर्ड",
       url: "#",
       icon: Box,
     },
     {
-      title: "Repair & Replacement",
+      title: "मरम्मत और प्रतिस्थापन",
       url: "#",
       icon: Clipboard,
     },
     {
-      title: "Resource Requests",
+      title: "संसाधन अनुरोध",
       url: "#",
       icon: DollarSign,
     },
     {
-      title: "Inter-Station Records",
+      title: "इंटर-स्टेशन रिकॉर्ड",
       url: "#",
       icon: IconClockRecord,
     },
   ],
   admin: [
     {
-      title: "Home",
+      title: "मुख्य पृष्ठ",
       url: "#",
       icon: Home,
     },
     {
-      title: "Credentials Generation",
+      title: "क्रेडेंशियल्स जनरेशन",
       url: "#",
       icon: Key,
     },
     {
-      title: "Tickets",
+      title: "टिकट",
       url: "#",
       icon: Clipboard,
     },
   ],
   gps: [
     {
-      title: "Barcode Code Generate",
+      title: "आइटम जोड़ें",
       url: "#",
       icon: BarcodeIcon,
     },
     {
-      title: "Budget Prediction",
+      title: "बजट भविष्यवाणी",
       url: "#",
       icon: IconCash,
     },
     {
-      title: "Station Record",
+      title: "स्टेशन रिकॉर्ड",
       url: "#",
       icon: Table2Icon,
     },
     {
-      title: "Resource Allocation",
+      title: "आइटम वितरण",
       url: "#",
       icon: BaggageClaim,
     },
     {
-      title: "Repair & Replacement",
+      title: "मरम्मत और प्रतिस्थापन",
       url: "#",
       icon: WrenchIcon,
     },
     {
-      title: "Self Inventory",
+      title: "स्वयं इन्वेंटरी",
       url: "#",
       icon: Box,
     },
     {
-      title: "Purchase List",
+      title: "खरीद सूची",
       url: "#",
       icon: ShoppingCart,
     },

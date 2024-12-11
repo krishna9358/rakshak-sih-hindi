@@ -4,10 +4,10 @@ function SelfInventory() {
   return (
     <div>
         <div className="flex justify-between mb-4">
-        <div><h1 className="text-xl font-bold"> Self Inventory</h1></div>
+        <div><h1 className="text-xl font-bold text-[#563007]"> आत्मा सूची</h1></div>
         <div>
           <label className="input input-bordered flex items-center h-9">
-            <input type="text" className="" placeholder="Search" />
+            <input type="text" className="" placeholder="खोजें" />
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 16 16"
@@ -27,27 +27,27 @@ function SelfInventory() {
         <table className="table">
           {/* head */}
           <thead>
-            <tr className="border text-sm">
+            <tr className="border text-sm text-[#563007]">
               <th></th>
-              <th>Product Name</th>
-              <th>Quantity</th>
+              <th>उत्पाद का नाम</th>
+              <th>मात्रा</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="text-[#563007]">
             {/* row 1 */}
             <tr>
               <th>1</th>
-              <td>Keyboard</td>
+              <td>कीबोर्ड</td>
               <td>10</td>
             </tr>
             <tr>
               <th>2</th>
-              <td>Mouse</td>
+              <td>माउस</td>
               <td>50</td>
             </tr>
             <tr>
               <th>3</th>
-              <td>Webcam</td>
+              <td>वेबकैम</td>
               <td>2</td>
             </tr>
           </tbody>

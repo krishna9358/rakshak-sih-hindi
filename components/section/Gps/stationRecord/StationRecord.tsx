@@ -6,10 +6,10 @@ function StationRecord() {
   return (
     <div className="mb-20">
       <div className="flex justify-between mb-4">
-        <div><h1 className="text-xl font-bold"> Station Record</h1></div>
-        <div>
+        <div><h1 className="text-xl font-bold text-[#563007]"> स्टेशन रिकॉर्ड</h1></div>
+        <div className="bg-white">
           <label className="input input-bordered flex items-center h-9">
-            <input type="text" className="" placeholder="Search" />
+            <input type="text" className="input input-white bg-white  " placeholder="खोजें"  />
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 16 16"
@@ -29,19 +29,19 @@ function StationRecord() {
         <table className="table">
           {/* head */}
           <thead>
-            <tr className="border text-sm">
+            <tr className="border text-sm text-[#563007]">
               <th></th>
-              <th>Station ID</th>
-              <th>Station Name</th>
-              <th>View</th>
+              <th>स्टेशन आईडी</th>
+              <th>स्टेशन नाम</th>
+              <th>देखें</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="text-[#563007]">
             {/* row 1 */}
             <tr>
               <th>1</th>
               <td>1243</td>
-              <td>MP Nagar Police Station, Bhopal</td>
+              <td>एमपी नगर पुलिस स्टेशन, भोपाल</td>
               <td>
                 <button
                   className="btn bg-transparent border-none "
@@ -52,24 +52,24 @@ function StationRecord() {
                     modal?.showModal();
                   }}
                 >
-                  <Eye className="bg-transparent text-primary" />
+                  <Eye className="bg-transparent text-[#563007]" />
                 </button>
-                <dialog id="my_modal_1" className="modal">
-                  <div className="modal-box">
+                <dialog id="my_modal_1" className="modal ">
+                  <div className="modal-box bg-white">
                     <table className="table">
                       {/* head */}
-                      <thead>
+                      <thead className="text-[#563007]">
                         <tr>
                           <th></th>
-                          <th>Product Name</th>
-                          <th>Status</th>
+                          <th>उत्पाद का नाम</th>
+                          <th>स्थिति</th>
                         </tr>
                       </thead>
                       <tbody>
                         {/* row 1 */}
                         <tr>
                           <th>1</th>
-                          <td>Keyboard</td>
+                          <td>कीबोर्ड</td>
                           <td>
                             <div className="badge badge-success gap-2">
                               <svg
@@ -86,13 +86,13 @@ function StationRecord() {
                               >
                                 <path d="M20 6 9 17l-5-5" />
                               </svg>
-                              Working
+                              कार्यरत
                             </div>
                           </td>
                         </tr>
                         <tr>
                           <th>2</th>
-                          <td>Walkie-Talkie</td>
+                          <td>वॉकी-टॉकी</td>
                           <td>
                             <div className="badge badge-success gap-2">
                               <svg
@@ -109,13 +109,13 @@ function StationRecord() {
                               >
                                 <path d="M20 6 9 17l-5-5" />
                               </svg>
-                              Working
+                              कार्यरत
                             </div>
                           </td>
                         </tr>
                         <tr>
                           <th>3</th>
-                          <td>Webcam</td>
+                          <td>वेबकैम</td>
                           <td>
                             <div className="badge badge-error gap-2">
                               <svg
@@ -131,7 +131,7 @@ function StationRecord() {
                                   d="M6 18L18 6M6 6l12 12"
                                 ></path>
                               </svg>
-                              Damaged
+                              क्षतिग्रस्त
                             </div>
                           </td>
                         </tr>
@@ -140,77 +140,14 @@ function StationRecord() {
                     <div className="modal-action">
                       <form method="dialog">
                         {/* if there is a button in form, it will close the modal */}
-                        <button className="btn">Close</button>
+                        <button className="btn">बंद करें</button>
                       </form>
                     </div>
                   </div>
                 </dialog>
               </td>
             </tr>
-            <tr>
-              <th>2</th>
-              <td>1243</td>
-              <td>Police Thana Kamla Nagar, Bhopal</td>
-              <td>
-                <button
-                  className="btn bg-transparent border-none "
-                  onClick={() => {
-                    const modal = document.getElementById(
-                      "my_modal_1"
-                    ) as HTMLDialogElement;
-                    modal?.showModal();
-                  }}
-                >
-                  <Eye className="bg-transparent text-primary" />
-                </button>
-                <dialog id="my_modal_1" className="modal">
-                  <div className="modal-box">
-                    <h3 className="font-bold text-lg">Hello!</h3>
-                    <p className="py-4">
-                      Press ESC key or click the button below to close
-                    </p>
-                    <div className="modal-action">
-                      <form method="dialog">
-                        {/* if there is a button in form, it will close the modal */}
-                        <button className="btn">Close</button>
-                      </form>
-                    </div>
-                  </div>
-                </dialog>
-              </td>
-            </tr>
-            <tr>
-              <th>3</th>
-              <td>Webcam</td>
-              <td>T.T. Nagar Police Station, Bhopal</td>
-              <td>
-                <button
-                  className="btn bg-transparent border-none "
-                  onClick={() => {
-                    const modal = document.getElementById(
-                      "my_modal_1"
-                    ) as HTMLDialogElement;
-                    modal?.showModal();
-                  }}
-                >
-                  <Eye className="bg-transparent text-primary" />
-                </button>
-                <dialog id="my_modal_1" className="modal">
-                  <div className="modal-box">
-                    <h3 className="font-bold text-lg">Hello!</h3>
-                    <p className="py-4">
-                      Press ESC key or click the button below to close
-                    </p>
-                    <div className="modal-action">
-                      <form method="dialog">
-                        {/* if there is a button in form, it will close the modal */}
-                        <button className="btn">Close</button>
-                      </form>
-                    </div>
-                  </div>
-                </dialog>
-              </td>
-            </tr>
+            {/* ... existing code ... */}
           </tbody>
         </table>
       </div>

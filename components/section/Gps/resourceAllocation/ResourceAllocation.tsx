@@ -3,32 +3,32 @@ import { Eye } from "lucide-react";
 function ResourceAllocation() {
   return (
     <div>
-      <h1 className="text-xl font-bold"> Resource Allocation</h1>
+      <h1 className="text-xl font-bold text-[#563007]"> संसाधन आवंटन</h1>
       <div className="overflow-x-auto mt-4">
         <table className="table">
-          {/* head */}
+          {/* शीर्षक */}
           <thead>
-            <tr className="text-sm border ">
+            <tr className="text-sm border text-[#563007]">
               <th></th>
-              <th>Station Details</th>
-              <th>Product Details</th>
-              <th>Demand Details</th>
-              <th>Pick-up Details</th>
-              <th>Amount</th>
-              <th>Status</th>
-              <th>Confirmation</th>
+              <th>स्टेशन विवरण</th>
+              <th>उत्पाद विवरण</th>
+              <th>डिमांड विवरण</th>
+              <th>पिक-अप विवरण</th>
+              <th>राशि</th>
+              <th>स्थिति</th>
+              <th>पुष्टि</th>
             </tr>
           </thead>
-          <tbody>
-            {/* row 1 */}
+          <tbody className="text-[#563007]">
+            {/* पंक्ति 1 */}
             <tr className="text-xs ">
               <th>1</th>
               <td>
                 <ul className="space-y-2">
                 <li>124</li>
                 <li>
-                MP Nagar Police Station, <br />
-                Bhopal
+                एमपी नगर पुलिस स्टेशन, <br />
+                भोपाल
                 </li>
                 </ul>
               </td>
@@ -44,20 +44,20 @@ function ResourceAllocation() {
                 >
                   <Eye className="bg-transparent text-primary" />
                 </button>
-                <dialog id="my_modal_1" className="modal">
-                  <div className="modal-box min-w-[700px] min-h-[500px]">
+                <dialog id="my_modal_1" className="modal ">
+                  <div className="modal-box min-w-[700px] min-h-[500px] bg-white">
                       <table className="w-full">
                         <tr className="border text-sm">
                         <th></th>
-                        <th>Product Category</th>
-                        <th>Quantity</th>
-                        <th>Status</th>
+                        <th>उत्पाद श्रेणी</th>
+                        <th>मात्रा</th>
+                        <th>स्थिति</th>
                         </tr>
                       </table>
                     <div className="modal-action ">
                       <form method="dialog  flex justify-end mt-auto">
-                        {/* if there is a button in form, it will close the modal */}
-                        <button className="btn  ">Close</button>
+                        {/* यदि फॉर्म में कोई बटन है, तो यह मोडल बंद कर देगा */}
+                        <button className="btn  ">बंद करें</button>
                       </form>
                     </div>
                   </div>
@@ -76,9 +76,9 @@ function ResourceAllocation() {
                 </ul>
               </td>
               <td>₹ 3000</td>
-              <td><div className="badge badge-primary badge-outline text-xs ">In Process</div></td>
+              <td><div className="badge badge-primary badge-outline text-xs ">प्रक्रिया में</div></td>
               <td>
-                <button className="btn btn-error btn-xs">Cancel</button>
+                <button className="btn btn-error btn-xs">रद्द करें</button>
               </td>
             </tr>
             <tr>

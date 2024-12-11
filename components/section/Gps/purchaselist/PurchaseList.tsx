@@ -5,10 +5,10 @@ function PurchaseList() {
   return (
     <div>
         <div className="flex justify-between mb-4">
-        <div><h1 className="text-xl font-bold"> Purchase List</h1></div>
+        <div><h1 className="text-xl font-bold text-[#563007]"> खरीद सूची</h1></div>
         <div>
           <label className="input input-bordered flex items-center h-9">
-            <input type="text" className="" placeholder="Search" />
+            <input type="text" className="bg-white" placeholder="खोजें"  />
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 16 16"
@@ -27,36 +27,36 @@ function PurchaseList() {
       <div className="overflow-x-auto">
         <table className="table">
           {/* head */}
-          <thead>
+          <thead className='bg-[#b38b59] text-white'>
             <tr className="border text-sm">
               <th></th>
-              <th>Product Name</th>
-              <th>Quantity</th>
+              <th>उत्पाद का नाम</th>
+              <th>मात्रा</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className='text-[#563007]'>
             {/* row 1 */}
             <tr>
               <th>1</th>
-              <td>Keyboard</td>
+              <td>कीबोर्ड</td>
               <td>10</td>
             </tr>
             <tr>
               <th>2</th>
-              <td>Mouse</td>
+              <td>माउस</td>
               <td>50</td>
             </tr>
             <tr>
               <th>3</th>
-              <td>Webcam</td>
+              <td>वेबकैम</td>
               <td>2</td>
             </tr>
           </tbody>
         </table>
       </div>
       <a href="https://gem.gov.in" target="_blank" rel="noopener noreferrer">
-        <button className="btn btn-primary btn-md text-white px-8 absolute bottom-6 right-6 m-4 text-[16px]">
-          <ArrowBigRight size={20} strokeWidth={0.75} /> GEM Portal
+        <button className="btn bg-[#b38b59] btn-md text-white px-8 absolute bottom-6 right-6 m-4 text-[16px]">
+          <ArrowBigRight size={20} strokeWidth={0.75} /> GEM पोर्टल
         </button>
       </a>
     </div>
