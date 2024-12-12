@@ -1,4 +1,4 @@
-# Rakshak
+# Rakshak : Centralized  Management System in Hindi
 
 ## Introduction
 Rakshak is a [brief description of the project, its purpose, and its target audience]. It aims to [explain the main goals and functionalities of the project].
@@ -14,6 +14,7 @@ To run the Rakshak project locally, follow these steps:
 
 2. **Install dependencies:**
    ```bash
+
    npm install
    ```
 
